@@ -22,7 +22,7 @@ large xml sitemaps indexnow for Bing, Yandex and Seznam
 </code></pre>
 
 ## Install tqdm to see progress bar: 
-<pre><code>pip install tdqm
+<pre><code>pip install tqdm
 </code></pre>
 
 ## Install requests to get responses and make requests: 
