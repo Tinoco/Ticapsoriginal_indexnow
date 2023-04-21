@@ -41,7 +41,7 @@ large xml sitemaps indexnow for Bing, Yandex and Seznam
 <pre><code> git clone https://github.com/Tinoco/Ticapsoriginal_indexnow.git
 </code></pre>
 
-## Change the indexnow.py file with your api key and search engine choice (bing,seznam,yandex):
+## Change the indexnow.py file with your api key and search engine choice (bing,seznam,yandex) and sitemaps path:
 
 ## Make indexnow operations :
 <pre><code>python indexnow.py
