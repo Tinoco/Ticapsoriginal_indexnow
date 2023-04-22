@@ -14,7 +14,7 @@ import time
 import requests
 
 # GENERATE AND INPUT YOUT INDEXNOW KEY ( https://www.bing.com/indexnow )
-key = '612e2092c13340e68a855b44c54b6527'
+key = '8888888888888888888888888'
 
 # DEFINE SEARCH ENGINES MIRROS
 # SEZNAM LINK https://www.seznam.cz
