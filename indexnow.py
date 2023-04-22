@@ -14,7 +14,7 @@ import time
 import requests
 
 # GENERATE AND INPUT YOUT INDEXNOW KEY ( https://www.bing.com/indexnow )
-key = '8888888888888888888888888'
+key = '612e2092c13340e68a855b44c54b6527'
 
 # DEFINE SEARCH ENGINES MIRROS
 # SEZNAM LINK https://www.seznam.cz
@@ -28,6 +28,15 @@ sitemap = adv.sitemap_to_df("https://ticapsoriginal.com/static/sitemaps2.xml")
 urls = sitemap["loc"].to_list()
 
 
+def response():
+    r = requests.post(
+                     "https://bing.com",
+                     data=data,
+                     headers=headers
+                     )
+    return r
+
+
 for item in tqdm(urls):
     data = {"host": "www.bing.com",
             "key": key,
@@ -37,30 +46,18 @@ for item in tqdm(urls):
         headers = {
                 "Content-type": "application/json", "charset": "utf-8"
                   }
-        r = requests.post(
-                        "https://bing.com",
-                        data=data,
-                        headers=headers
-                         )
+        r = response()
         print(r.status_code)
         if r.status_code == 200:
             print(item)
         elif r.status_code != 200:
             print("AWAITING TO NEW REQUEST")
             time.sleep(10)
-            r = requests.post(
-                             "https://bing.com/",
-                             data=data,
-                             headers=headers
-                             )
+            r = response()
             print(r.status_code)
     except SomeException as error:
         print("AWAITING TO NEW REQUEST")
         time.sleep(10)
-        r = requests.post(
-                        "https://bing.com/",
-                        data=data,
-                        headers=headers
-                        )
+        r = response()
         print(r.status_code)
         continue
