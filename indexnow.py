@@ -37,6 +37,13 @@ def response():
     return r
 
 
+def await_new():
+    print("AWAITING TO NEW REQUEST")
+    time.sleep(10)
+    r = response()
+    print(r.status_code)
+
+
 for item in tqdm(urls):
     data = {"host": "www.bing.com",
             "key": key,
@@ -51,13 +58,7 @@ for item in tqdm(urls):
         if r.status_code == 200:
             print(item)
         elif r.status_code != 200:
-            print("AWAITING TO NEW REQUEST")
-            time.sleep(10)
-            r = response()
-            print(r.status_code)
+            await_new()
     except SomeException as error:
-        print("AWAITING TO NEW REQUEST")
-        time.sleep(10)
-        r = response()
-        print(r.status_code)
+        await_new()
         continue
