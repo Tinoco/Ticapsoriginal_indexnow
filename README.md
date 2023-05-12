@@ -53,3 +53,6 @@ large xml sitemaps indexnow for Bing, Yandex and Seznam
 * [`100% pycodestyle coverage`](https://pypi.org/project/pycodestyle/)
 
 * [`0% code plagiarism detected`](https://github.com/blingenf/copydetect)
+
+## about:
+* code and resource used in [`Ticapsoriginal`](https://ticapsoriginal.com)
